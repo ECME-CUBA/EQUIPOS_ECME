@@ -1,0 +1,86 @@
+{
+  "name": "Equipo",
+  "fields": [
+    {
+      "fieldName": "chapilla",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "unique"
+      ]
+    },
+    {
+      "fieldName": "clase",
+      "fieldType": "Clase",
+      "fieldValues": "Ligero,Pesado,Complementario"
+    },
+    {
+      "fieldName": "modelo",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codigo",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "unique"
+      ]
+    },
+    {
+      "fieldName": "chapa",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "unique"
+      ]
+    },
+    {
+      "fieldName": "estado",
+      "fieldType": "Estado",
+      "fieldValues": "BUENO,REGULAR,MALO,NO_DESCRITO"
+    },
+    {
+      "fieldName": "anno",
+      "fieldType": "Integer"
+    },
+    {
+      "fieldName": "ueb",
+      "fieldType": "UEB",
+      "fieldValues": "PROYECTO,COES,MONTAJE,LOGISTICA,CIEGO,HOLGUIN,SANTIAGO,OC"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "motor",
+      "otherEntityRelationshipName": "equipo",
+      "relationshipName": "motor",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "chofer",
+      "otherEntityRelationshipName": "equipo",
+      "relationshipName": "cofer",
+      "otherEntityField": "id",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "marca",
+      "otherEntityRelationshipName": "equipo",
+      "relationshipName": "marca",
+      "otherEntityField": "id",
+      "ownerSide": true
+    }
+  ],
+  "changelogDate": "20201027194115",
+  "entityTableName": "equipo",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

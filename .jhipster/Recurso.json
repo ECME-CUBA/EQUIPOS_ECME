@@ -1,0 +1,38 @@
+{
+  "name": "Recurso",
+  "fields": [
+    {
+      "fieldName": "nombre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "um",
+      "fieldType": "UnidadDeMedida",
+      "fieldValues": "Litro,Metro,Unidad,Kg,MetroCuadrado"
+    },
+    {
+      "fieldName": "tipo",
+      "fieldType": "TipoRecurso",
+      "fieldValues": "Parte,Pieza,AgregadoMayor,AgregadoMenor,Insumo,Lubricante"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "asignacion",
+      "otherEntityRelationshipName": "recurso",
+      "relationshipName": "asignacion"
+    }
+  ],
+  "changelogDate": "20201027194215",
+  "entityTableName": "recurso",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

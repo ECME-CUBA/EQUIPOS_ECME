@@ -1,0 +1,58 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-motor-heading" jhiTranslate="equiposApp.motor.home.createOrEditLabel">Create or edit a Motor</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="equiposApp.motor.codigo" for="field_codigo">Codigo</label>
+                    <input type="text" class="form-control" name="codigo" id="field_codigo"
+                           formControlName="codigo"/>
+                    <div *ngIf="editForm.get('codigo')!.invalid && (editForm.get('codigo')!.dirty || editForm.get('codigo')!.touched)">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="equiposApp.motor.estado" for="field_estado">Estado</label>
+                    <select class="form-control" name="estado" formControlName="estado" id="field_estado">
+                        <option value="BUENO">{{ 'equiposApp.Estado.BUENO' | translate }}</option>
+                        <option value="REGULAR">{{ 'equiposApp.Estado.REGULAR' | translate }}</option>
+                        <option value="MALO">{{ 'equiposApp.Estado.MALO' | translate }}</option>
+                        <option value="NO_DESCRITO">{{ 'equiposApp.Estado.NO_DESCRITO' | translate }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="equiposApp.motor.marca" for="field_marca">Marca</label>
+                    <input type="text" class="form-control" name="marca" id="field_marca"
+                           formControlName="marca"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="equiposApp.motor.marca" for="field_marca">Marca</label>
+                    <select class="form-control" id="field_marca" name="marca" formControlName="marca">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="marcaOption.id === editForm.get('marca')!.value?.id ? editForm.get('marca')!.value : marcaOption" *ngFor="let marcaOption of marcas; trackBy: trackById">{{ marcaOption.id }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

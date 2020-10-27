@@ -1,0 +1,46 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="asignacion">
+            <h2><span jhiTranslate="equiposApp.asignacion.detail.title">Asignacion</span> {{ asignacion.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="equiposApp.asignacion.fecha">Fecha</span></dt>
+                <dd>
+                    <span>{{ asignacion.fecha }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.asignacion.cantidad">Cantidad</span></dt>
+                <dd>
+                    <span>{{ asignacion.cantidad }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.asignacion.chofer">Chofer</span></dt>
+                <dd>
+                    <div *ngIf="asignacion.chofer">
+                        <a [routerLink]="['/chofer', asignacion.chofer?.id, 'view']">{{ asignacion.chofer?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.asignacion.recurso">Recurso</span></dt>
+                <dd>
+                    <div *ngIf="asignacion.recurso">
+                        <a [routerLink]="['/recurso', asignacion.recurso?.id, 'view']">{{ asignacion.recurso?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/asignacion', asignacion.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

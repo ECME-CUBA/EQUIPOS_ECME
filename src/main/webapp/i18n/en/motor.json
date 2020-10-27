@@ -1,0 +1,25 @@
+{
+  "equiposApp": {
+    "motor": {
+      "home": {
+        "title": "Motors",
+        "createLabel": "Create a new Motor",
+        "createOrEditLabel": "Create or edit a Motor",
+        "notFound": "No Motors found"
+      },
+      "created": "A new Motor is created with identifier {{ param }}",
+      "updated": "A Motor is updated with identifier {{ param }}",
+      "deleted": "A Motor is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Motor {{ id }}?"
+      },
+      "detail": {
+        "title": "Motor"
+      },
+      "codigo": "Codigo",
+      "estado": "Estado",
+      "marca": "Marca",
+      "marca": "Marca"
+    }
+  }
+}

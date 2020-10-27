@@ -1,0 +1,32 @@
+{
+  "equiposApp": {
+    "equipo": {
+      "home": {
+        "title": "Equipos",
+        "createLabel": "Create a new Equipo",
+        "createOrEditLabel": "Create or edit a Equipo",
+        "notFound": "No Equipos found"
+      },
+      "created": "A new Equipo is created with identifier {{ param }}",
+      "updated": "A Equipo is updated with identifier {{ param }}",
+      "deleted": "A Equipo is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Equipo {{ id }}?"
+      },
+      "detail": {
+        "title": "Equipo"
+      },
+      "chapilla": "Chapilla",
+      "clase": "Clase",
+      "modelo": "Modelo",
+      "codigo": "Codigo",
+      "chapa": "Chapa",
+      "estado": "Estado",
+      "anno": "Anno",
+      "ueb": "Ueb",
+      "motor": "Motor",
+      "cofer": "Cofer",
+      "marca": "Marca"
+    }
+  }
+}

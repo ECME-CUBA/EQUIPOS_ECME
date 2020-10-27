@@ -1,0 +1,25 @@
+{
+  "equiposApp": {
+    "motor": {
+      "home": {
+        "title": "Motors",
+        "createLabel": "Crear nuevo Motor",
+        "createOrEditLabel": "Crear o editar Motor",
+        "notFound": "Ningún Motors encontrado"
+      },
+      "created": "Un nuevo Motor ha sido creado con el identificador {{ param }}",
+      "updated": "Un Motor ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Motor ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Motor {{ id }}?"
+      },
+      "detail": {
+        "title": "Motor"
+      },
+      "codigo": "Codigo",
+      "estado": "Estado",
+      "marca": "Marca",
+      "marca": "Marca"
+    }
+  }
+}

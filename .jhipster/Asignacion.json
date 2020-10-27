@@ -1,0 +1,40 @@
+{
+  "name": "Asignacion",
+  "fields": [
+    {
+      "fieldName": "fecha",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "cantidad",
+      "fieldType": "Float"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "chofer",
+      "otherEntityRelationshipName": "asignacion",
+      "relationshipName": "chofer",
+      "otherEntityField": "id"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "recurso",
+      "otherEntityRelationshipName": "asignacion",
+      "relationshipName": "recurso",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20201027194315",
+  "entityTableName": "asignacion",
+  "dto": "no",
+  "pagination": "no",
+  "service": "no",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

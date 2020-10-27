@@ -1,0 +1,10 @@
+{
+  "equiposApp": {
+    "Clase": {
+      "null": "",
+      "Ligero": "Ligero",
+      "Pesado": "Pesado",
+      "Complementario": "Complementario"
+    }
+  }
+}

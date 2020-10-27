@@ -1,0 +1,25 @@
+{
+  "equiposApp": {
+    "recurso": {
+      "home": {
+        "title": "Recursos",
+        "createLabel": "Crear nuevo Recurso",
+        "createOrEditLabel": "Crear o editar Recurso",
+        "notFound": "Ningún Recursos encontrado"
+      },
+      "created": "Un nuevo Recurso ha sido creado con el identificador {{ param }}",
+      "updated": "Un Recurso ha sido actualizado con el identificador {{ param }}",
+      "deleted": "Un Recurso ha sido eliminado con el identificador {{ param }}",
+      "delete": {
+        "question": "¿Seguro que quiere eliminar Recurso {{ id }}?"
+      },
+      "detail": {
+        "title": "Recurso"
+      },
+      "nombre": "Nombre",
+      "um": "Um",
+      "tipo": "Tipo",
+      "asignacion": "Asignacion"
+    }
+  }
+}

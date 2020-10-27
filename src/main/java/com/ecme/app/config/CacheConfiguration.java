@@ -47,6 +47,14 @@ public class CacheConfiguration {
             createCache(cm, com.ecme.app.domain.User.class.getName());
             createCache(cm, com.ecme.app.domain.Authority.class.getName());
             createCache(cm, com.ecme.app.domain.User.class.getName() + ".authorities");
+            createCache(cm, com.ecme.app.domain.Equipo.class.getName());
+            createCache(cm, com.ecme.app.domain.Recurso.class.getName());
+            createCache(cm, com.ecme.app.domain.Recurso.class.getName() + ".asignacions");
+            createCache(cm, com.ecme.app.domain.Asignacion.class.getName());
+            createCache(cm, com.ecme.app.domain.Chofer.class.getName());
+            createCache(cm, com.ecme.app.domain.Chofer.class.getName() + ".asignacions");
+            createCache(cm, com.ecme.app.domain.Marca.class.getName());
+            createCache(cm, com.ecme.app.domain.Motor.class.getName());
             // jhipster-needle-ehcache-add-entry
         };
     }

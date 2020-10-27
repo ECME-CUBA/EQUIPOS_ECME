@@ -1,0 +1,76 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="equipo">
+            <h2><span jhiTranslate="equiposApp.equipo.detail.title">Equipo</span> {{ equipo.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span jhiTranslate="equiposApp.equipo.chapilla">Chapilla</span></dt>
+                <dd>
+                    <span>{{ equipo.chapilla }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.clase">Clase</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'equiposApp.Clase.' + equipo.clase }}">{{ equipo.clase }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.modelo">Modelo</span></dt>
+                <dd>
+                    <span>{{ equipo.modelo }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.codigo">Codigo</span></dt>
+                <dd>
+                    <span>{{ equipo.codigo }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.chapa">Chapa</span></dt>
+                <dd>
+                    <span>{{ equipo.chapa }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.estado">Estado</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'equiposApp.Estado.' + equipo.estado }}">{{ equipo.estado }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.anno">Anno</span></dt>
+                <dd>
+                    <span>{{ equipo.anno }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.ueb">Ueb</span></dt>
+                <dd>
+                    <span jhiTranslate="{{ 'equiposApp.UEB.' + equipo.ueb }}">{{ equipo.ueb }}</span>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.motor">Motor</span></dt>
+                <dd>
+                    <div *ngIf="equipo.motor">
+                        <a [routerLink]="['/motor', equipo.motor?.id, 'view']">{{ equipo.motor?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.cofer">Cofer</span></dt>
+                <dd>
+                    <div *ngIf="equipo.cofer">
+                        <a [routerLink]="['/chofer', equipo.cofer?.id, 'view']">{{ equipo.cofer?.id }}</a>
+                    </div>
+                </dd>
+                <dt><span jhiTranslate="equiposApp.equipo.marca">Marca</span></dt>
+                <dd>
+                    <div *ngIf="equipo.marca">
+                        <a [routerLink]="['/marca', equipo.marca?.id, 'view']">{{ equipo.marca?.id }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/equipo', equipo.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

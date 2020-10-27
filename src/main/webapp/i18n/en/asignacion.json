@@ -1,0 +1,25 @@
+{
+  "equiposApp": {
+    "asignacion": {
+      "home": {
+        "title": "Asignacions",
+        "createLabel": "Create a new Asignacion",
+        "createOrEditLabel": "Create or edit a Asignacion",
+        "notFound": "No Asignacions found"
+      },
+      "created": "A new Asignacion is created with identifier {{ param }}",
+      "updated": "A Asignacion is updated with identifier {{ param }}",
+      "deleted": "A Asignacion is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Asignacion {{ id }}?"
+      },
+      "detail": {
+        "title": "Asignacion"
+      },
+      "fecha": "Fecha",
+      "cantidad": "Cantidad",
+      "chofer": "Chofer",
+      "recurso": "Recurso"
+    }
+  }
+}

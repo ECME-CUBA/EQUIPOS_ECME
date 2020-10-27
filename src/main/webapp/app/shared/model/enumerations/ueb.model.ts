@@ -1,0 +1,17 @@
+export const enum UEB {
+  PROYECTO = 'PROYECTO',
+
+  COES = 'COES',
+
+  MONTAJE = 'MONTAJE',
+
+  LOGISTICA = 'LOGISTICA',
+
+  CIEGO = 'CIEGO',
+
+  HOLGUIN = 'HOLGUIN',
+
+  SANTIAGO = 'SANTIAGO',
+
+  OC = 'OC',
+}

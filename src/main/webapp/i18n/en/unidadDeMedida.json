@@ -1,0 +1,12 @@
+{
+  "equiposApp": {
+    "UnidadDeMedida": {
+      "null": "",
+      "Litro": "Litro",
+      "Metro": "Metro",
+      "Unidad": "Unidad",
+      "Kg": "Kg",
+      "MetroCuadrado": "MetroCuadrado"
+    }
+  }
+}

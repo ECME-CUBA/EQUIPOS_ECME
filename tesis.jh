@@ -1,0 +1,104 @@
+entity Equipo{
+chapilla String unique
+clase Clase
+modelo String
+codigo  String unique
+chapa String unique
+estado Estado
+anno Integer
+ueb UEB
+}
+
+
+entity Recurso{
+nombre String
+um UnidadDeMedida
+tipo TipoRecurso
+}
+
+entity Asignacion{
+//responsable
+fecha Instant
+cantidad Float
+
+}
+entity Chofer{
+nombre String
+licencia Licencia
+
+}
+
+enum Licencia{
+A_1,
+A,
+B,
+C_1,
+C,
+D_1,
+D,
+E,
+F,
+E
+}
+entity Marca{
+marca String
+}
+
+entity Motor{
+codigo String unique
+estado  Estado
+marca String
+}
+
+
+enum UnidadDeMedida {
+    Litro,
+    Metro,
+    Unidad,
+    Kg,
+    MetroCuadrado
+
+}
+enum TipoRecurso {
+    Parte,
+    Pieza,
+    AgregadoMayor,
+    AgregadoMenor,
+    Insumo,
+    Lubricante
+
+
+}
+
+
+enum Clase {
+    Ligero, Pesado, Complementario
+}
+enum UEB {
+    PROYECTO, COES, MONTAJE, LOGISTICA, CIEGO, HOLGUIN, SANTIAGO, OC
+}
+
+enum Estado {
+    BUENO, REGULAR, MALO, NO_DESCRITO
+}
+
+
+
+
+
+
+relationship OneToMany{
+
+Chofer to Asignacion
+Recurso to Asignacion
+}
+
+
+relationship OneToOne {
+    Equipo{motor} to Motor
+    Equipo{cofer} to Chofer
+    Equipo{marca} to Marca
+    Motor{marca} to Marca
+
+}
+
